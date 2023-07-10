@@ -1,5 +1,6 @@
 const pantalla = document.querySelector(".pantalla");
 const botones = document.querySelectorAll(".btn");
+const icon = document.querySelector(".btn_icon");
 
 /* fucionamiento de los botones*/
 botones.forEach(boton => {
@@ -47,3 +48,26 @@ botones.forEach(boton => {
     })
 
 });
+
+/* Boton dark mode*/
+const body = document.querySelector('body')
+const boton = document.querySelector('.btn_boton')
+
+boton.addEventListener("click", () =>{
+    
+    body.classList.toggle('darkmode');
+    icon.classList.add('animated');
+
+    if(body.classList.contains('darkmode')){
+        icon.classList.remove('bi-sun');
+        icon.classList.add('bi-moon');
+
+    }else{
+        icon.classList.remove('bi-moon');
+        icon.classList.add('bi-sun');
+
+    }
+
+
+    
+})

@@ -1,0 +1,102 @@
+
+body{
+    background: #00030D;
+    display: grid;
+    place-items: center;
+    align-items: center;
+    padding: 10px;
+}
+/* Estilos de la calculadora*/
+.calculadora{
+    color: white;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4 / 5);
+    gap: .5rem;
+}
+/* Estilos de la pantalla*/
+.pantalla{
+    grid-column: 1 / 5;
+    height: 100px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: white;
+    background-color: #001233;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+}
+/* Estilos del boton */
+.btn{
+    background-color: #011126;
+    color: white;
+    border: 0;
+    padding: 1.5rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 40px;
+}
+/* Efectos de los bonotes*/ 
+.btn:hover{
+    background-color: #0a1128;
+}
+#borrar{
+    grid-column: span 2;
+    background-color: #001233;
+}
+#c{
+    grid-column: span 2;
+    background-color: #001233;
+   
+}
+
+/* Boton del dark mode*/
+.btn_boton{
+    background-color: lightgrey;
+    width: 12em;
+    height: 5em;
+    border-radius: 10em;
+    margin: 1.5em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.btn_indicator{
+    background-color: white;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    position: absolute;
+}
+.btn_icon-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.btn_icon{
+    color: black;
+    font-size: 2rem;
+}
+
+
+/* Color mode*/
+body.darkmode{
+    background-color: white;
+}
+.darkmode .btn_indicator{
+    transform: translateX(7em);
+    background-color: black;
+}
+.darkmode .btn_icon{
+    color: white;
+}
+
